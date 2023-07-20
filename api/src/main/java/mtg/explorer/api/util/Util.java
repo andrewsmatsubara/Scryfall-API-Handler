@@ -1,19 +1,17 @@
 package mtg.explorer.api.util;
 
+import mtg.explorer.api.types.ScryfallEndpoints;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.client.RestTemplate;
 
 import java.io.IOException;
 
+/**
+ * utility class for request methods(change the Class name would be great!)
+ *
+ * @author Andrews Matsubara
+ */
 public class Util {
-    public static String getByPartOfName(String partOfName) throws IOException, InterruptedException {
-        String uri = "https://api.scryfall.com/cards/autocomplete?q=" + partOfName;
-
-        String response = getRequest(uri);
-
-        return response;
-    }
-
     /**
      * get method that receives an uri as parameter
      *
@@ -23,7 +21,7 @@ public class Util {
      *
      * @author Andrews Matsubara
      */
-    private static String getRequest(String uri) {
+    public static String getRequest(String uri) {
         RestTemplate restTemplate = new RestTemplate();
         ResponseEntity<String> response = restTemplate.getForEntity(uri, String.class);
 
