@@ -1,9 +1,16 @@
-import React from 'react';
-import { render, screen } from '@testing-library/react';
+import {screen, render} from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('has working components', () => {
+  test('there is a input component', () => {
+    render(<App />);
+
+    expect(screen.getByTestId('card-search-input')).toBeInTheDocument();
+  });
+
+  test('there is one or more <Card> components', () => {
+    render(<App />);
+
+    expect(screen.getByTestId('card')).toBeInTheDocument();
+  })
 });
