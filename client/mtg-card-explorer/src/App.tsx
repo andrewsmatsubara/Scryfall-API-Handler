@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { CardSearchInput } from './components/CardSearchInput';
+import { CardSearchInput } from './components/CardSearchInput/CardSearchInput';
 
 function App() {
   return (

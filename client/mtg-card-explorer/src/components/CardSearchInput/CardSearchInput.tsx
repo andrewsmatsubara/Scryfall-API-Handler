@@ -1,6 +1,13 @@
 import {ChangeEvent, useState} from "react";
 
-export function CardSearchInput() {
+/**
+ * input used by the user to search a card by name
+ *
+ * @return {JSX.Element} the input component itself
+ * 
+ * @author Andrews Matsubara
+ */
+export function CardSearchInput(): JSX.Element {
   const [cardName, setCardName] = useState("");
 
   function handleChange(e: ChangeEvent<HTMLInputElement>) {
