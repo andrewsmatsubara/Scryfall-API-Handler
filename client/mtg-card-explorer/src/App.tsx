@@ -1,10 +1,11 @@
 import React from 'react';
 import './App.css';
+import { CardSearchInput } from './components/CardSearchInput';
 
 function App() {
   return (
     <div className="App">
-      React Template
+      <CardSearchInput/>
     </div>
   );
 }

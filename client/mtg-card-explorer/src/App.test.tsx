@@ -5,7 +5,7 @@ describe('has working components', () => {
   test('there is a input component', () => {
     render(<App />);
 
-    expect(screen.getByTestId('card-search-input')).toBeInTheDocument();
+    expect(screen.getByRole('textbox')).toBeInTheDocument();
   });
 
   test('there is one or more <Card> components', () => {
