@@ -1,4 +1,5 @@
 import './App.css';
+import { CardList } from './components/CardList/CardList';
 import { CardSearchInput } from './components/CardSearchInput/CardSearchInput';
 
 /**
@@ -12,6 +13,7 @@ function App() {
   return (
     <div className="App">
       <CardSearchInput/>
+      <CardList/>
     </div>
   );
 }
