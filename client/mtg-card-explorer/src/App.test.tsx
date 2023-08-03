@@ -5,7 +5,7 @@ describe('has working components', () => {
   render(<App/>);
 
   test('there is a input component', () => {
-    const input = screen.getByRole('textbox');
+    const input = screen.getByRole('combobox');
 
     expect(input).toBeInTheDocument();
   });

@@ -2,9 +2,21 @@ import {screen, render, fireEvent} from '@testing-library/react';
 import {CardSearchInput} from "./CardSearchInput";
 
 describe('input component behavior', () => {
-  render(<CardSearchInput/>);  
+  const getCardByName = jest.fn();
+  const setCardName = jest.fn();
+  const setOpen = jest.fn();
 
-  const input = screen.getByRole('textbox') as HTMLInputElement;
+  render(
+    <CardSearchInput
+      loading={true}
+      options={[]}
+      getCardByName={getCardByName}
+      setCardName={setCardName}
+      open={true}
+      setOpen={setOpen}
+    />);  
+
+  const input = screen.getByRole('combobox') as HTMLInputElement;
 
   test('onchange function is working', () => {
     fireEvent.change(input, {target: {value: 'abc'}});
