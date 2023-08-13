@@ -10,7 +10,7 @@ import axios from "axios";
  *
  * @author Andrews Matsubara
  */
-export default async function fetchCardByName(userInputCardName: string): Promise<Array<any>> {
+export async function fetchCardByName(userInputCardName: string): Promise<Array<any>> {
   const url = `http://localhost:8080/cards?name=${userInputCardName}`;
   const response = await axios.get(url);
   const data = response.data;

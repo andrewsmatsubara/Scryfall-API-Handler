@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import fetchCardByName from "../../service/CardService";
+import { fetchCardByName } from "../../service/CardService";
 
 type CardProps = {
   cardName: string

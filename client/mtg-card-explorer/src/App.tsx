@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { CardSearchInput } from './components/CardSearchInput/CardSearchInput';
 import { Card } from './components/Card/Card';
-import fetchCardByName from './service/CardService';
+import { fetchCardByName } from './service/CardService';
 
 /**
  * main component
