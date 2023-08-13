@@ -39,7 +39,7 @@ function App(): JSX.Element {
   }
 
   return (
-    <div className="App">
+    <main className="App">
       <CardSearchInput
         loading={loading}
         options={options}
@@ -49,7 +49,7 @@ function App(): JSX.Element {
         setOpen={setOpen}
       />
       {cardName ? <Card cardName={cardName}/> : <div></div>}
-    </div>
+    </main>
   );
 }
 

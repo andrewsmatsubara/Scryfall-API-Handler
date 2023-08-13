@@ -1,0 +1,14 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  max-width: 350px;
+}
+
+.card-image {
+  width: 100%;
+}

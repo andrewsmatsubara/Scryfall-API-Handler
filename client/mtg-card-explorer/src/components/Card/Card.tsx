@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { fetchCardByName } from "../../service/CardService";
+import './Card.css';
 
 type CardProps = {
   cardName: string
@@ -38,8 +39,8 @@ export function Card({cardName}: CardProps): JSX.Element {
   }
 
   return (
-    <>
-      {cardInfo.length !== 0 ? <img src={cardInfo[0].image_uris.small} alt={`${cardInfo[0].name} card`}/> : <div></div>}
-    </>
+    <div className="image-container">
+      {cardInfo.length !== 0 ? <img src={cardInfo[0].image_uris.normal} alt={`${cardInfo[0].name} card`} className="card-image"/> : <div></div>}
+    </div>
   );
 }

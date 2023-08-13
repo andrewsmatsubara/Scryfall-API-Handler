@@ -22,6 +22,13 @@ export function CardSearchInput({loading, options, getCardByName, setCardName, o
 
   return (
     <Autocomplete
+      className="card-search-input"
+      sx={{
+        display: "flex",
+        minWidth: "10%",
+        width: "50%",
+        margin: "5%"
+      }}
       freeSolo
       renderInput={(params) => (
         <TextField
